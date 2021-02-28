@@ -3,6 +3,7 @@ package com.rku_18fotca11002.tutorial08;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -14,6 +15,7 @@ public class Login extends AppCompatActivity {
     EditText edtName, edtPassword;
     Button btnLogin;
     DatabaseHelper db;
+    SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,12 @@ public class Login extends AppCompatActivity {
                 Boolean check = db.checkData(uname, password);
                 if(check){
                     Toast.makeText(Login.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+
+                    preferences = getSharedPreferences("user",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("username",uname);
+                    editor.commit();
+
                     Intent intent = new Intent(Login.this,Welcome.class);
                     intent.putExtra("username", uname);
                     startActivity(intent);
