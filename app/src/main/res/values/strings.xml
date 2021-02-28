@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Tutorial 08</string>
+    <!--    Login-->
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter_password_here">Enter Password here</string>
+    <string name="password">Password</string>
+    <string name="enter_email_here">Enter Email here</string>
+    <string name="username">Username</string>
+    <string name="logout">Logout</string>
+    <string name="back">Back</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="not_a_member_register">Not a Member? Register</string>
+    <string name="registration">Registration</string>
+
+    <!--    Registration-->
+    <string name="registration_form">Registration Form</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="enter_username">Enter email as Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="branch_ce_it">Branch CE / IT</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="profile_status_active_inactive">Profile Status Active / Inactive</string>
+    <string name="register_me">Register Me</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="user_name">User Name</string>
+    <string name="psw">Password</string>
+    <string name="profile">Profile</string>
+    <string name="register">Register</string>
+    <string name="general">General</string>
+    <string name="ce_it">CE / IT</string>
+    <string name="active">Active</string>
+    <string name="about">About</string>
+    <string-array name="city">
+        <item>Rajkot</item>
+        <item>Junagadh</item>
+        <item>Ahmedabad</item>
+        <item>Baroda</item>
+        <item>Surat</item>
+    </string-array>
+</resources>
