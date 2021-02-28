@@ -8,14 +8,24 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class Welcome extends AppCompatActivity {
+    ListView lstData;
+    ArrayList<Item> list;
     SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        lstData = findViewById(R.id.lstData);
+        list = generateData();
+        MyAdapter myAdapter = new MyAdapter(this, list);
+        lstData.setAdapter(myAdapter);
 
         preferences = getSharedPreferences("user", MODE_PRIVATE);
         String userPreference =preferences.getString("username","");
@@ -23,6 +33,14 @@ public class Welcome extends AppCompatActivity {
             startActivity(new Intent(Welcome.this,Login.class));
             finish();
         }
+    }
+
+    private ArrayList<Item> generateData() {
+        ArrayList<Item> list = new ArrayList<Item>();
+
+        list.add(new Item("Fenil Babariya"));
+
+        return list;
     }
 
     @Override

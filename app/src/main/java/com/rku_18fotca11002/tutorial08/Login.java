@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
 
                 Boolean check = db.checkData(uname, password);
                 if(check){
-                    Toast.makeText(Login.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
                     preferences = getSharedPreferences("user",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
