@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Welcome extends AppCompatActivity {
     ListView lstData;
     ArrayList<Item> list;
-    SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,17 +27,15 @@ public class Welcome extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter(this, list);
         lstData.setAdapter(myAdapter);
 
-        preferences = getSharedPreferences("user", MODE_PRIVATE);
-        String userPreference =preferences.getString("username","");
-        if(userPreference.equals("")){
-            startActivity(new Intent(Welcome.this,Login.class));
-            finish();
-        }
     }
 
     private ArrayList<Item> generateData() {
         ArrayList<Item> list = new ArrayList<Item>();
+//      Add data into list view
 
+        list.add(new Item("Fenil Babariya"));
+        list.add(new Item("Fenil Babariya"));
+        list.add(new Item("Fenil Babariya"));
         list.add(new Item("Fenil Babariya"));
 
         return list;
