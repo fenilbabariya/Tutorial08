@@ -75,6 +75,6 @@ public class Login extends AppCompatActivity {
 
     public void registration(View view) {
         startActivity(new Intent(Login.this,Registration.class));
-        finish();
+//        finish();
     }
 }
